@@ -3,7 +3,7 @@ numHigh = int(input("Enter the high number: "))
 numRange = range(numLow, numHigh)
 
 def FizzBuzz(x):
-    for x in range(numLow, numHigh):
+    for x in range(numLow, numHigh+1):
         if x%5 == 0 and x%3 == 0:
             print("FizzBuzz")
         elif x%5 == 0:
