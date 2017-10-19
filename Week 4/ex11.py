@@ -11,7 +11,6 @@ def guessCheck(x):
         print("Higher.")
 
 while guess != num:
-    if guess != num:
         guessCheck(guess)
         guesses += 1
         guess = int(input("Try again: "))
