@@ -1,30 +1,16 @@
 numLow = int(input("Enter the low number: "))
 numHigh = int(input("Enter the high number: "))
-
-def Fizz(x):
-    """
-    Returns true if x divisible by 3
-    """
-    return x%3 == 0
-
-def Buzz(x):
-    """
-    Returns true if x divisible by 5
-    """
-    return x%5 == 0
+numRange = range(numLow, numHigh)
 
 def FizzBuzz(x):
-    """
-    Returns true if x divisible by 3 and 5
-    """
-    return x%5 == 0 and x%3 == 0
+    for x in range(numLow, numHigh):
+        if x%5 == 0 and x%3 == 0:
+            print("FizzBuzz")
+        elif x%5 == 0:
+            print("Buzz")
+        elif x%3 == 0:
+            print("Fizz")
+        else:
+            print(x)
 
-for x in range(numLow, numHigh):
-    if FizzBuzz(x) == True:
-        print("FizzBuzz")
-    elif Fizz(x) == True:
-        print("Fizz")
-    elif Buzz(x) == True:
-        print("Buzz")
-    else:
-        print(x)
+FizzBuzz(numRange)
