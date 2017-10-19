@@ -5,9 +5,7 @@ guesses = 0
 num = randint(1,100)
 
 def guessCheck(x):
-    if x == num:
-        print(f"Correct! The number was {num}.")
-    elif x > num:
+    if x > num:
         print("Lower.")
     elif x < num:
         print("Higher.")
