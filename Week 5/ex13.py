@@ -1,5 +1,5 @@
 def remove_dups(L1, L2):
-    L3 = sorted(L1)
+    L3 = L1[:]
     for e in L3:
         if e in L2:
             L1.remove(e)
