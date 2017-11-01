@@ -9,7 +9,7 @@ def is_word_guessed(secret_word,letters_guessed):
         return False
 
 
-def get_guessed_word(secret_word,letters_guessed):
+def get_guessed_word(secret_word,letters_guessed): #on the worksheet it said that this function should be similar to is_word_guessed, however I could not figure out a way to make this reasonable whilst using sets.
     space = ['_ '] * len(secret_word)
     secret_word_list = list(secret_word)
     loops = 0
@@ -18,7 +18,7 @@ def get_guessed_word(secret_word,letters_guessed):
             loops += 1
             space.insert(loops-1,i + '')
             del space[loops]
-            if loops == len(secret_word):
+            if loops == len(secret_word): #
                 return ''.join(space)
         else:
             loops += 1
@@ -28,10 +28,8 @@ def get_guessed_word(secret_word,letters_guessed):
                 return ''.join(space)
 
 def get_available_letters(letters_guessed):
-    alphabet = list(string.ascii_lowercase)
+    alphabet = list(string.ascii_lowercase) #this probably isn't very optimised.
     for e in letters_guessed:
         if e in string.ascii_lowercase:
             alphabet.remove(e)
     return ''.join(sorted(alphabet))
-
-print(get_available_letters(letters_guessed))
